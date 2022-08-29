@@ -1,0 +1,102 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Alumnos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="ion-text-center">
+    <ion-card-header>
+      <ion-item>
+        <ion-badge expand="full"  color="success">{{userHome}} </ion-badge>
+
+      </ion-item>
+      
+      <ion-card-title>Te damos la bienvenida</ion-card-title>
+      <ion-card-subtitle>Informacion adicional</ion-card-subtitle>     
+    </ion-card-header>
+  </ion-card>
+
+  <!-- <div style="display: flex; justify-content: center; align-items: center;">
+    <h2>DOCENTES</h2>
+    <img src="data:image/png;base64,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">
+    </div> -->
+
+  <ion-item>
+    <ion-label  position="fixed">Nombre:</ion-label>
+    <ion-input placeholder="Ingrese su Nombre" [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label  position="fixed">Apellido</ion-label>
+    <ion-input placeholder="Ingrese su Apellido" [(ngModel)]="apellido" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label  position="fixed">Rut</ion-label>
+    <ion-input type="numeric" placeholder="Ingrese su Rut" [(ngModel)]="rut" ></ion-input>
+  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-label  position="fixed">Nivel Edu : </ion-label>
+      <ion-select interface="action-sheet" placeholder="Nivel Educacion" [(ngModel)]="carrera">
+        <ion-select-option value="media">Media</ion-select-option>
+        <ion-select-option value="tecnica">Tecnica</ion-select-option>
+        <ion-select-option value="universitaria">Universitaria</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <br>
+ <div>
+  <ion-list>
+    <ion-item>
+      <ion-label  position="fixed">Asignaturas : </ion-label>
+      <ion-select interface="action-sheet" placeholder="Seleccione Asignaturas" [(ngModel)]="carrera">
+        <ion-select-option value="media">Desarrollo de Software</ion-select-option>
+        <ion-select-option value="tecnica">Aplicaciones Móviles</ion-select-option>
+        <ion-select-option value="universitaria">Inglés</ion-select-option>
+        <ion-select-option value="tecnica">Arquitectura DB</ion-select-option>
+        <ion-select-option value="universitaria">Calidad de Software</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+ </div>
+<br>
+  <div>
+   <ion-list-header>
+      Datos de nacimiento
+   </ion-list-header>
+   
+   <ion-item>
+    <ion-label> Fecha de Nacimiento</ion-label>
+    <ion-item>
+      <ion-label>D MMM YYYY H:mm</ion-label>
+      <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="fecha_nacimiento" ></ion-datetime>
+    </ion-item>
+    
+   </ion-item>
+   
+  </div>
+  <br>
+  <br>
+  <div >
+    <ion-button expand="full"  type="submit" (click) = "codigoQR()">Escanear QR</ion-button>
+  </div>
+
+  <div >
+    <ion-button expand="full"  type="submit" (click) = "Mostrar()">Mostrar Datos</ion-button>
+  </div>
+<br>
+    
+  
+ 
+</ion-content>
+
+<ion-footer class="ion-text-center" collapse="fade">
+  <ion-toolbar>     
+    <ion-title  size="small"><ion-icon name="logo-linkedin"></ion-icon> <ion-icon name="logo-instagram">
+
+    </ion-icon>{{value}}</ion-title>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Docente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card id="card" class="ion-text-center">
+    <ion-card-header>
+      <ion-card-subtitle>Estimad@ Docente</ion-card-subtitle>
+      <ion-card-title>Bienvenid@</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <b> Goog luck!</b>
+    </ion-card-content>
+  </ion-card>
+
+
+
+<!--  -->
+
+<ion-content padding>
+
+  <div>
+  	<ion-input type="text" [(ngModel)]="encodeText"></ion-input>
+  	<ion-button expand="full" (click)="encode()"> Generar QR</ion-button>
+  </div>
+
+  
+
+  <div *ngIf="scannedData.text">
+
+  	<label>Your bar code is</label>
+  	<br>
+  	<span>{{scannedData.text}}</span>
+  	
+  </div>
+<!-- </ion-content>
+
+    
+    <div>
+      <ion-button expand="full" type="submit"  (click)="generarQR()" >Generar QR</ion-button>
+    </div>
+    <div>
+      <ion-button (click)="animacion()">RouterLink</ion-button>
+    </div>
+
+</ion-content> -->
+
+<ion-footer class="ion-text-center" collapse="fade">
+  <ion-toolbar>
+    <ion-title size="small">
+      <ion-icon name="logo-facebook"></ion-icon>
+      <ion-icon name="logo-linkedin"></ion-icon>
+      <ion-icon name="logo-instagram">  </ion-icon>{{value}}
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

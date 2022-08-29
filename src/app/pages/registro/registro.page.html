@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Recuperar Conatraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<form [formGroup]="email">
+    <div>
+      <ion-item>
+        <ion-input type="text" placeholder="Ingrese su Correo" [(ngModel)]="correo" formControlName="correo">
+          <ion-icon name="logo-email"></ion-icon></ion-input>
+      </ion-item>
+    </div>
+
+    <div>
+      <ion-button expand="full" type="submit" (click)="enviar()" >Enviar</ion-button>
+    </div>
+
+    <div>
+      <ion-button expand="full" type="submit" (click)="volver()" >volver</ion-button>
+    </div>
+    
+  </form>
+
+  
+
+</ion-content>
+
+<ion-footer class="ion-text-center" collapse="fade">
+  <ion-toolbar>
+    <ion-title size="small">
+      <ion-icon name="logo-linkedin"></ion-icon>
+      <ion-icon name="logo-instagram"></ion-icon>{{value}}
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
